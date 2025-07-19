@@ -24,10 +24,21 @@ void star_square_pattern(int n) {
     }
 }
 
+void star_triangle_pattern(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j < i+1; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     int n = 5;
     square_pattern(n);
     cout << endl;
     star_square_pattern(n);
+    cout << endl;
+    star_triangle_pattern(n);
     return 0;
 }
