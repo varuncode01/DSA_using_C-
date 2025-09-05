@@ -12,7 +12,7 @@ int dectobinary(int decnum){
         decnum = decnum / 2;     // updating decnum when divided by 2
         
         ans = ans + (rem * pow);   // updating ans
-        pow = pow * 10;            // pow is below because we want to add numbers in 10^0, 10^1, 10^2...  in forward direction
+        pow = pow * 10;            // pow is below because we want to add numbers in 10^0, 10^1, 10^2....  in forward direction
     }
     return ans;    
 }
@@ -27,7 +27,7 @@ int binarytodecimal(int binum){
         ans = ans + (rem * pow);
         
         binum = binum / 10;      // updating binum when divided by 10
-        pow = pow * 2;           // pow is below because we want to add numbers in 2^0, 2^1, 2^2...  in forward direction
+        pow = pow * 2;           // pow is below because we want to add numbers in 2^0, 2^1, 2^2....  in forward direction
     }
     return ans;
 }
@@ -52,6 +52,6 @@ int main() {
     cin >> binum;
 
     cout << "Decimal of " << binum << " is " << binarytodecimal(binum) << endl;
-    
+
     return 0;
 }
