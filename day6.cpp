@@ -21,6 +21,18 @@ int linearSearch(int arr[], int size, int target) {
     return -1;
 }
 
+// Revere an Array
+void reverseArr(int arr[], int size){
+    int start = 0, end = size-1;
+    while (start <= end)
+    {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+    
+}
+
 int main() {
     int arr1[10] = {2,3,4,5,1,6,7,8,9,10};
     int arr2[] = {11,12,13,14,15,16,17,18,19,20}; // automatic size is according to the number of elements
@@ -63,5 +75,20 @@ int main() {
     } else {
         cout << "Element not found" << endl;
     }
+
+    // Reverse an Array
+    cout << "Before reversing an Array: \n";
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr1[i] << " ";
+    }
+    cout << endl;
+    cout << "After reversing an array: \n";
+    reverseArr(arr1, size);
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr1[i] << " ";
+    }
+    
     return 0;
 }
