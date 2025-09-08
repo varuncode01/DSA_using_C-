@@ -10,6 +10,17 @@ void changeArr(int arr[], int size) {
     }
 }
 
+// Linear Search
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int main() {
     int arr1[10] = {2,3,4,5,1,6,7,8,9,10};
     int arr2[] = {11,12,13,14,15,16,17,18,19,20}; // automatic size is according to the number of elements
@@ -42,5 +53,15 @@ int main() {
         cout << arr2[i] << "\n";           // changed values of original array in main function
     }
     
+    // Linear Search
+    int target;
+    cout << "Enter the element to be searched: ";
+    cin >> target;
+    int ans = linearSearch(arr1, size, target);
+    if (ans != -1) {
+        cout << "Element found at index: " << ans << endl;
+    } else {
+        cout << "Element not found" << endl;
+    }
     return 0;
 }
