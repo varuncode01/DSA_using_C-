@@ -18,12 +18,12 @@ int main() {
         cout << vec1[i] << " ";
     }
     cout << "\nSize of vec2: " << vec2.size() << endl;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < vec2.size(); i++)
     {
         cout << vec2[i] << " ";
     }
     cout << "\nSize of vec3: " << vec3.size() << endl;
-    for (int i = 0; i < 5; i++)
+    for (int i : vec3)
     {
         cout << vec3[i] << " ";
     }
