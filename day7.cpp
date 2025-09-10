@@ -41,6 +41,20 @@ int main() {
     cout << "Element at index 2: " << vec1.at(2) << endl; // at function to access element at specific index
     cout << "Front element: " << vec1.front() << endl; // front function
     cout << "Back element: " << vec1.back() << endl; // back function
-    
+
+    //Leetcode problem: https://leetcode.com/problems/single-number/
+    // solution 
+    /*
+    class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int answer = 0;
+        for(int val : nums){
+            answer = answer ^ val;
+        }
+        return answer;
+    }
+};
+    */
     return 0;
 }
