@@ -34,6 +34,20 @@ int main(){
     }
     cout << "Maximum sum of subarray: " << maxsum << endl;
 
+    // Implqementation of Kadane's Algorithm
+    vector <int> arr3 = {3, 6, -1, 4, -8, 2, 3, -2, 4, -10};
+    int currsum = 0, maxsum2 = INT_MIN;
+    for (int val: arr3)
+    {
+        currsum += val;
+        maxsum2 = max(maxsum2, currsum);
+
+        if (currsum < 0)
+        {
+            currsum = 0;
+        }
+    }
+    cout << "Maximum sum of subarray using Kadane's Algorithm: " << maxsum2 << endl;
     // Kadane's algorithm to find maximum sum of subarray in O(n) time complexity
     // leetcode problem: https://leetcode.com/problems/maximum-subarray/
     /*
@@ -54,5 +68,6 @@ public:
     }
 };
     */
+
     return 0;
 }
