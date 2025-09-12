@@ -20,5 +20,19 @@ int main(){
         cout << endl;
     }
 
+    // maximum sum of subarray using brute force
+    vector <int> arr2 = {3, -4, 2, -3, -1, 7, -5};
+    int maxsum = INT_MIN;
+    for (int st = 0; st < arr2.size(); st++)
+    {
+        int currsum = 0;
+        for (int end = st; end < arr2.size(); end++)
+        {
+            currsum = currsum + arr2[end];
+            maxsum = max(maxsum, currsum);
+        }
+    }
+    cout << "Maximum sum of subarray: " << maxsum << endl;
+
     return 0;
 }
