@@ -34,5 +34,25 @@ int main(){
     }
     cout << "Maximum sum of subarray: " << maxsum << endl;
 
+    // Kadane's algorithm to find maximum sum of subarray in O(n) time complexity
+    // leetcode problem: https://leetcode.com/problems/maximum-subarray/
+    /*
+    class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int currSum = 0, maxSum = INT_MIN;
+
+        for(int val: nums){
+            currSum += val;
+            maxSum = max(currSum,maxSum);
+
+            if(currSum < 0){
+                currSum = 0;
+            }
+        }
+        return maxSum;
+    }
+};
+    */
     return 0;
 }
