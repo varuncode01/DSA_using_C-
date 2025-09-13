@@ -46,11 +46,30 @@ int calcsp(int arr[]){
     return 0;
 }
 
+// WAF to swap min and maximum elements of an array
+int swapminmax(int arr[], int size){
+    int arr2[] = {}; 
+    int minindex = 0, maxindex = 0;
+    for (int i = 0; i <= size; i++)
+    {
+        if(arr[i] < arr[minindex]){
+            swap(arr[i], arr[minindex]);
+        }
+        if (arr[i] > arr[maxindex])
+        {
+            swap(arr[i], arr[maxindex]);
+        }
+    }
+    swap(arr[minindex], arr[maxindex]);
+    return 0;
+}
+
 int main() {
     int arr1[10] = {2,3,4,5,1,6,7,8,9,10};
     int arr2[] = {11,12,13,14,15,16,17,18,19,20}; // automatic size is according to the number of elements
     int arr3[10]; // uninitialized/empty array
     // int arr4[]; // empty array which don't have specific size mentioned is not allowed
+    int arr5[] = {}; // this is allowed
     cout << "Size of arr1: " << sizeof(arr1) << " bytes" << endl;
     cout << "Size of arr1: " << sizeof(arr2) / sizeof(int) << " elements" << endl;
 
@@ -106,6 +125,14 @@ int main() {
     // product and sum of all elements in an array
     cout << endl;
     calcsp(arr1);
+
+    // swap min and max elements of an array
+    swapminmax(arr2, size);
+    cout << "Array after swapping min and max elements: \n";
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr1[i] << " ";
+    }
 
     return 0;
 }
