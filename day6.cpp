@@ -48,7 +48,6 @@ int calcsp(int arr[]){
 
 // WAF to swap min and maximum elements of an array
 int swapminmax(int arr[], int size){
-    int arr2[] = {}; 
     int minindex = 0, maxindex = 0;
     for (int i = 0; i <= size; i++)
     {
