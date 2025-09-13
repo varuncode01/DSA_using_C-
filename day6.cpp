@@ -33,6 +33,19 @@ void reverseArr(int arr[], int size){
     
 }
 
+// Homework 
+// WAF to calculate the sum and product of all numbers in an array 
+int calcsp(int arr[]){
+    int sum = 0, product = 1;
+    for (int i = 0; i < 10; i++){
+        sum = sum + arr[i];
+        product = product * arr[i];
+    }
+    cout << "Sum: " << sum << endl;
+    cout << "Product: " << product << endl;
+    return 0;
+}
+
 int main() {
     int arr1[10] = {2,3,4,5,1,6,7,8,9,10};
     int arr2[] = {11,12,13,14,15,16,17,18,19,20}; // automatic size is according to the number of elements
@@ -90,5 +103,9 @@ int main() {
         cout << arr1[i] << " ";
     }
     
+    // product and sum of all elements in an array
+    cout << endl;
+    calcsp(arr1);
+
     return 0;
 }
