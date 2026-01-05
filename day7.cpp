@@ -6,6 +6,7 @@ using namespace std;
 // Vector is a template class in C++ STL (Standard Template Library)
 int main() {
     // Vector declaration
+    /*
     vector<int> vector_name; // empty vector 
     cout << "Size of vector: " << vector_name.size() << endl;
     // cout << vector_name[0] << endl; // error as vector is empty
@@ -22,6 +23,7 @@ int main() {
     {
         cout << vec2[i] << " ";
     }
+    */
     /*
     cout << "\nSize of vec3: " << vec3.size() << endl;
     for (int i : vec3)   // range based for loop no need to do it like this for (int i = 0; i < vec3.size(); i++)
@@ -31,6 +33,7 @@ int main() {
     */ 
 
     // vector functions
+    /*
     cout << "size of vec1: " << vec1.size() << endl;  // size function
     cout << "capacity of vec1: " << vec1.capacity() << endl; // capacity function
     cout << "max size of vec1: " << vec1.max_size() << endl; // max_size function
@@ -41,6 +44,7 @@ int main() {
     cout << "Element at index 2: " << vec1.at(2) << endl; // at function to access element at specific index
     cout << "Front element: " << vec1.front() << endl; // front function
     cout << "Back element: " << vec1.back() << endl; // back function
+    */
 
     //Leetcode problem: https://leetcode.com/problems/single-number/
     // solution 
@@ -56,5 +60,10 @@ public:
     }
 };
     */
+   
+    
+    // Homework: Solve the following problems using vectors
+    // 1. Linear Search in a vector
+    
     return 0;
 }
