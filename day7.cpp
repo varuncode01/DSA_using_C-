@@ -2,6 +2,20 @@
 #include <vector>
 using namespace std;
 
+
+// Homework 
+// 1. Linear Search in a vector
+int linearSearch(vector<int> vec, int key) {
+    int found_at;
+    for (int val = 0; val < vec.size(); val++){
+        if (key == vec[val])
+        {
+            found_at = val;
+        }
+    }
+    return found_at;
+}
+
 // Vector's size is dynamic unlike arrays which have fixed size
 // Vector is a template class in C++ STL (Standard Template Library)
 int main() {
@@ -64,6 +78,12 @@ public:
     
     // Homework: Solve the following problems using vectors
     // 1. Linear Search in a vector
-    
+    /*
+    vector<int> vec = {4,2,3,5,7,9,1};
+    int key = 5;
+    int index = linearSearch(vec, key);
+    cout << "Element " << key << " found at index: " << index << endl;
+    */
+   
     return 0;
 }
