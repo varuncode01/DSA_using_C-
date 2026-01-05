@@ -16,6 +16,18 @@ int linearSearch(vector<int> vec, int key) {
     return found_at;
 }
 
+// 2. Reverse a vector using pass by reference(change will be reflected in original vector)
+vector<int> reverseVector(vector<int> &vec) {
+    int left = 0; 
+    int right = vec.size() - 1;
+    while (left < right){
+        swap(vec[left], vec[right]);
+        left++;
+        right--;
+    }
+    return vec;
+}
+
 // Vector's size is dynamic unlike arrays which have fixed size
 // Vector is a template class in C++ STL (Standard Template Library)
 int main() {
@@ -85,5 +97,13 @@ public:
     cout << "Element " << key << " found at index: " << index << endl;
     */
    
+    // 2. Reverse a vector
+    /*
+    vector <int> vec = {1,2,3,4,5,6,7,8,9};
+    reverseVector(vec); // function modifies the original vector
+    for (int i : vec) {
+        cout << i;
+    }
+    */
     return 0;
 }
