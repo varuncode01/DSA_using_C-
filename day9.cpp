@@ -101,6 +101,28 @@ int MajorityElementOp(vector<int> arr){
     return -1;
 }
 
+// Majority Element
+// Moore's Voting Algorithm
+// Time Complexity: O(n)
+int MooreMajorityElement(vector<int> arr){
+    
+    int n = arr.size();
+    
+    int frequency = 0, ans = 0;
+    for (int i = 0; i < n; i++) {
+        if (frequency == 0){
+            ans = arr[i];
+        }
+        if(ans == arr[i]){
+            frequency++;
+        }
+        else{
+            frequency--;
+        }
+    }
+    return ans;
+}
+
 int main(){
     // Pairsum
     vector<int> nums = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
@@ -126,6 +148,8 @@ int main(){
     cout << "\nMajority Element using brute force: " << majorityElementbf(nums2) << endl;
 
     cout << "Majority Element using optimal approach: " << MajorityElementOp(nums2) << endl;
+
+    cout << "Majority Element using Moore's Voting Algorithm: " << MooreMajorityElement(nums2) << endl;
 
     return 0;
 }
