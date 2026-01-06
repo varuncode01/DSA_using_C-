@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 // Pairsum
@@ -75,6 +76,31 @@ int majorityElementbf(vector<int> nums){
     return -1;
 }
 
+// Majority Element
+// Optimal Approach(using sorting)
+// Time Complexity: O(n log n)
+int MajorityElementOp(vector<int> arr){
+    
+    sort(arr.begin(), arr.end()); // Sorting array
+    
+    int n = arr.size();
+    
+    int frequency = 1, ans = arr[0];
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == arr[i-1]){
+            frequency++;
+        }
+        else{
+            frequency = 0;
+            ans = arr[i];
+        }
+        if(frequency > n/2){
+            return ans;
+        }
+    }
+    return -1;
+}
+
 int main(){
     // Pairsum
     vector<int> nums = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
@@ -97,7 +123,9 @@ int main(){
 
     // Majority Element
     vector<int> nums2 = {2,2,1,1,1,2,2,3,1,4,3,3,4,4,4,4,5,6,7,8,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4};
-    cout << "\nMajority Element is: " << majorityElementbf(nums2) << endl;
+    cout << "\nMajority Element using brute force: " << majorityElementbf(nums2) << endl;
+
+    cout << "Majority Element using optimal approach: " << MajorityElementOp(nums2) << endl;
 
     return 0;
 }
