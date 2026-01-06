@@ -120,7 +120,20 @@ int MooreMajorityElement(vector<int> arr){
             frequency--;
         }
     }
-    return ans;
+
+    int count = 0;
+    for (int val : arr){
+        if (val == ans){
+            count++;
+        }
+    }
+    if (count > n/2)
+    {
+        return ans;
+    }
+    else{
+        return -1;
+    }
 }
 
 int main(){
